@@ -1,3 +1,4 @@
+# Está em Desenvolvimento 💻
 ## Funcionalidades 🚀
 
 - Listagem de produtos _(em breve)_ 🛒
