@@ -1,0 +1,80 @@
+
+.divMain {
+    position: sticky;
+}
+
+
+.logoContainer {
+    position: relative;
+    right: 18%;
+}
+
+.logo {
+    color: white;
+}
+
+.userContainer {
+    position: relative;
+    left: 18%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background);
+}
+
+.signin {
+    padding: 1rem;
+    color: white;
+}
+
+.signup {
+    color: white;
+}
+
+.signup:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite;
+}
+
+.logo:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite;
+}
+
+
+a:hover {
+    color: white;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(105, 105, 105, 0.75),
+        0 0 10px rgba(128, 128, 128, 0.75),
+        0 0 15px rgba(169, 169, 169, 0.75),
+        0 0 20px rgba(250, 235, 215, 0.75),
+        0 0 25px rgba(250, 235, 215, 0.75),
+        0 0 30px rgba(255, 255, 255, 0.45);
+    }
+    to {
+        text-shadow: 0 0 5px rgba(105, 105, 105, 0.75),
+        0 0 10px rgba(128, 128, 128, 0.75),
+        0 0 15px rgba(169, 169, 169, 0.75),
+        0 0 20px rgba(250, 235, 215, 0.75),
+        0 0 25px rgba(250, 235, 215, 0.75),
+        0 0 30px rgba(255, 255, 255, 0.45);
+    }
+}
+
+
+
