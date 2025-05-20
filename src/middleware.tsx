@@ -4,6 +4,7 @@ const publicRoutes = [
     {path: '/sign-in', whenAuthenticated: 'redirect'},
     {path: '/sign-up', whenAuthenticated: 'redirect'},
     {path: '/profile', whenAuthenticated: 'redirect'},
+    {path: '/my-cart', whenAuthenticated: 'next'},
     {path: '/', whenAuthenticated: 'next'},
     // {path: '/dashboard', whenAuthenticated: 'next'}
 ] as const;
