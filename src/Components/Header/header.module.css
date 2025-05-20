@@ -13,7 +13,7 @@
     color: white;
 }
 
-.userContainer {
+.user {
     position: relative;
     left: 18%;
 }
@@ -29,6 +29,23 @@
     left: 0;
     width: 100%;
     background-color: var(--background);
+}
+
+.mycar {
+    position: relative;
+    right: 8%;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.iconprofile {
+    position: relative;
+    left: 8%;
+    top: 3px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 .signin {
