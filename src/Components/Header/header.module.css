@@ -94,4 +94,127 @@ a:hover {
 }
 
 
+.flyoutContainer {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.flyoutLink {
+    position: relative;
+    color: lightgray;
+}
+
+.flyoutLink:hover {
+    position: relative;
+    color: white;
+}
+
+.flyout_underline {
+    position: absolute;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    height: 4px;
+    transform-origin: left;
+    transform: scaleX(0);
+    border-radius: 9999px;
+    background-color: #a5b4fc;
+    transition: transform 0.3s ease-out;
+}
+
+.flyoutContent {
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    background-color: white;
+    color: black;
+}
+
+.flyoutTransparentArea {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background-color: transparent;
+}
+
+.flyoutArrow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 16px;
+    width: 16px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: white;
+}
+
+.priceContainer {
+    width: 256px;
+    background-color: white;
+    padding: 24px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.pricingSection {
+    margin-bottom: 12px;
+}
+
+.pricingLink {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+    color: dimgray;
+}
+
+.pricingLink:hover {
+    color: black;
+}
+
+.pricingLink::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    border-radius: 9999px;
+    background-color: black;
+    transition: transform 0.3s ease-out;
+}
+
+.pricingLink:hover::after {
+    transform: scaleX(1);
+}
+
+.pricingSectionLast {
+    margin-bottom: 24px;
+}
+
+.pricingHeading {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pricingBtn {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #171717;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: background-color 0.2s,
+    color 0.2s;
+}
+
+.pricingBtn:hover {
+    background-color: #171717;
+    color: white;
+}
 
