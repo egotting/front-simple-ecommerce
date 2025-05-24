@@ -1,7 +1,33 @@
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 10%;
+    gap: 20px;
     justify-content: center;
     height: 100vh;
 }
+
+
+.btnProducts {
+    border-radius: 16px;
+    border: 2px dashed lightgray;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: white;
+    transition: all 300ms;
+}
+
+.btnProducts:hover {
+    transform: translate(4px, -4px);
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 #a5b4fc;
+}
+
+.btnProducts:active {
+    transform: translate(0px, 0px);
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+
