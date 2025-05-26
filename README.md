@@ -23,12 +23,12 @@ Está em Desenvolvimento 💻
 
 2. **Instale as dependências:** 📦
    ```bash
-   npm install
+   npm install .
    ```
 
 3. **Inicie o servidor de desenvolvimento:** 🖥️
    ```bash
-   npm run dev
+   npx next dev
    ```
 
 4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador. 🌐
