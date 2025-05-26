@@ -8,7 +8,7 @@
 >>   - [ ] *Refatorar;*
 ---
 > **[HOTFIX]:**
-
+---
 # 2. Home
 
 > **[FEAT]:**
@@ -16,3 +16,4 @@
 >   - [ ] **Aplica Animações e Responsividade;**
 ---
 > **[HOTFIX]:**
+---
