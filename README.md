@@ -1,4 +1,5 @@
 Está em Desenvolvimento 💻
+
 ## Funcionalidades 🚀
 
 - Listagem de produtos _(em breve)_ 🛒
@@ -16,17 +17,20 @@ Está em Desenvolvimento 💻
 ## Como Rodar o Projeto ▶️
 
 1. **Clone o repositório:** 📂
+
    ```bash
    git clone https://github.com/seu-usuario/simple-ecommerce.git
    cd simple-ecommerce
    ```
 
 2. **Instale as dependências:** 📦
+
    ```bash
    npm install
    ```
 
 3. **Inicie o servidor de desenvolvimento:** 🖥️
+
    ```bash
    npm run dev
    ```
