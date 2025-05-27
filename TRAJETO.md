@@ -2,8 +2,8 @@
 
 >  **[FEAT]:**
 >>   - [x] *Implementar layout = {logo, home, products, about, contactus, shopping cart, login, register, logo de conta loga};*
->>   - [ ] *Aplica dropdowns menu em = {products, contactus, shopping cart, logo de conta logada};*
->>   - [ ] *Aplica responsividade e animações mais detalhadas;*
+>>   - [x] *Aplica dropdowns menu em = {products, contactus, shopping cart, logo de conta logada};*
+>>   - [x] *Aplica responsividade e animações mais detalhadas;*
 >>   - [ ] *formas de acessibilidade*
 >>   - [ ] *Refatorar;*
 ---
