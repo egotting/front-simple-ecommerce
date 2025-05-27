@@ -1,121 +1,68 @@
+.header {
+    border-bottom: 1px solid #374151;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
 
 .divMain {
-    position: sticky;
-}
-
-
-.logoContainer {
-    position: relative;
-    right: 18%;
-}
-
-.logo {
-    color: white;
-}
-
-.user {
-    position: relative;
-    left: 18%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 .nav {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px 20px;
-    gap: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--background);
+    justify-content: space-between;
+    height: 64px;
+    gap: 24px;
 }
 
-.mycar {
-    position: relative;
-    right: 8%;
-    top: 3px;
-    width: 20px;
-    height: 20px;
+.logoContainer {
+    flex-shrink: 0;
 }
 
-.iconprofile {
-    position: relative;
-    left: 8%;
-    top: 3px;
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.signin {
-    padding: 1rem;
+.logo {
     color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
 }
 
-.signup {
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+}
+
+.navLink {
     color: white;
-}
-
-.signup:hover {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite;
-}
-
-.logo:hover {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite;
-}
-
-
-a:hover {
-    color: white;
-}
-
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 5px rgba(105, 105, 105, 0.75),
-        0 0 10px rgba(128, 128, 128, 0.75),
-        0 0 15px rgba(169, 169, 169, 0.75),
-        0 0 20px rgba(250, 235, 215, 0.75),
-        0 0 25px rgba(250, 235, 215, 0.75),
-        0 0 30px rgba(255, 255, 255, 0.45);
-    }
-    to {
-        text-shadow: 0 0 5px rgba(105, 105, 105, 0.75),
-        0 0 10px rgba(128, 128, 128, 0.75),
-        0 0 15px rgba(169, 169, 169, 0.75),
-        0 0 20px rgba(250, 235, 215, 0.75),
-        0 0 25px rgba(250, 235, 215, 0.75),
-        0 0 30px rgba(255, 255, 255, 0.45);
-    }
-}
-
-
-.flyoutContainer {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
     position: relative;
-    width: fit-content;
-    height: fit-content;
 }
 
-.flyoutLink {
-    position: relative;
-    color: lightgray;
+.navLink:hover {
+    color: #e5e7eb;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.flyoutLink:hover {
-    position: relative;
-    color: white;
-}
-
-.flyout_underline {
+.navLink::after {
+    content: "";
     position: absolute;
     bottom: -8px;
-    left: -8px;
-    right: -8px;
-    height: 4px;
+    left: 0;
+    right: 0;
+    height: 2px;
     transform-origin: left;
     transform: scaleX(0);
     border-radius: 9999px;
@@ -123,98 +70,263 @@ a:hover {
     transition: transform 0.3s ease-out;
 }
 
-.flyoutContent {
-    position: absolute;
-    left: 50%;
-    top: 48px;
-    background-color: white;
-    color: black;
-}
-
-.flyoutTransparentArea {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    right: 0;
-    height: 24px;
-    background-color: transparent;
-}
-
-.flyoutArrow {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    height: 16px;
-    width: 16px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background-color: white;
-}
-
-.priceContainer {
-    width: 256px;
-    background-color: white;
-    padding: 24px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.pricingSection {
-    margin-bottom: 12px;
-}
-
-.pricingLink {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 12px;
-    position: relative;
-    text-decoration: none;
-    width: fit-content;
-    color: dimgray;
-}
-
-.pricingLink:hover {
-    color: black;
-}
-
-.pricingLink::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform-origin: left;
-    transform: scaleX(0);
-    border-radius: 9999px;
-    background-color: black;
-    transition: transform 0.3s ease-out;
-}
-
-.pricingLink:hover::after {
+.navLink:hover::after {
     transform: scaleX(1);
 }
 
-.pricingSectionLast {
-    margin-bottom: 24px;
+.user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
 }
 
-.pricingHeading {
+.cartLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.cartIcon {
+    font-size: 20px;
+}
+
+.cartText {
+    font-weight: 500;
+}
+
+.cartCount {
+    background-color: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 12px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
 }
 
-.pricingBtn {
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid #171717;
-    padding: 8px 16px;
-    font-weight: 600;
-    transition: background-color 0.2s,
-    color 0.2s;
+.profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.pricingBtn:hover {
-    background-color: #171717;
+.profileLink {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.profileLink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.iconProfile {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #374151;
+    transition: border-color 0.2s ease;
+}
+
+.profileLink:hover .iconProfile {
+    border-color: #6b7280;
+}
+
+.signOutButton {
+    color: #ef4444;
+    background: transparent;
+    border: 1px solid #ef4444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.signOutButton:hover {
+    background-color: #ef4444;
     color: white;
 }
 
+.authLinks {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.signUp {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid #374151;
+}
+
+.signUp:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #6b7280;
+}
+
+.signIn {
+    color: #171717;
+    background-color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.signIn:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+.authLoading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.loadingSpinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #374151;
+    border-top: 2px solid #a5b4fc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add this class to prevent content from being hidden behind fixed header */
+.headerOffset {
+    padding-top: 64px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav {
+        height: auto;
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 16px;
+    }
+
+    .logoContainer {
+        order: 1;
+    }
+
+    .navLinks {
+        order: 3;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .user {
+        order: 2;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .cartLink {
+        order: 1;
+    }
+
+    .profileContainer {
+        order: 2;
+        gap: 8px;
+    }
+
+    .authLinks {
+        order: 2;
+        gap: 8px;
+    }
+
+    .navLink {
+        padding: 12px 16px;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .signUp,
+    .signIn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .signOutButton {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .headerOffset {
+        padding-top: 120px; /* Adjust based on mobile header height */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navLinks {
+        gap: 24px;
+    }
+
+    .user {
+        gap: 12px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .divMain {
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .cartText {
+        display: none;
+    }
+
+    .authLinks {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .signUp,
+    .signIn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profileContainer {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
