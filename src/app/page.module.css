@@ -31,3 +31,51 @@
 }
 
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .main {
+        height: 100vh;
+        padding: 20px 16px;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .nav > * {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main {
+        padding: 32px 20px;
+    }
+
+    .nav {
+        gap: 24px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .main {
+        padding: 16px 12px;
+        padding-top: 40px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+}
+
+
+
