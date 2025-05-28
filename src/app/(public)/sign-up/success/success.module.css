@@ -1,0 +1,703 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    padding: 20px;
+    padding-top: 84px;
+}
+
+.contentWrapper {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.iconContainer {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.checkmark {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confettiPiece {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    opacity: 0.8;
+    animation: confetti 4s ease-in-out infinite;
+}
+
+.confettiPiece:nth-child(odd) {
+    background-color: #059669;
+}
+
+.confettiPiece:nth-child(3n) {
+    background-color: #34d399;
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(800px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.header {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 12px;
+    background: linear-gradient(to right, #059669, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Discount Section */
+.discountSection {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+    animation: slideIn 0.8s ease-out 0.5s both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.discountCard {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border-radius: 12px;
+    padding: 24px;
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+}
+
+.discountHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.discountIcon {
+    font-size: 24px;
+}
+
+.discountTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.discountContent {
+    text-align: center;
+}
+
+.discountText {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    opacity: 0.9;
+}
+
+.codeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.discountCode {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.copyButton {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copyButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.codeExpiry {
+    font-size: 12px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* User Info */
+.userInfo {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.userAvatar {
+    flex-shrink: 0;
+}
+
+.avatarImage {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+}
+
+.userDetails {
+    flex: 1;
+    text-align: left;
+}
+
+.userName {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.userEmail {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 8px 0;
+}
+
+.memberBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #10b981;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badgeIcon {
+    font-size: 12px;
+}
+
+/* Benefits Section */
+.benefitsSection {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.benefitsTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.benefitsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.benefit:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.benefitIcon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.benefitContent {
+    text-align: left;
+}
+
+.benefitTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.benefitText {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Next Steps */
+.nextSteps {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.nextStepsTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.stepsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.stepNumber {
+    width: 32px;
+    height: 32px;
+    background-color: #10b981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    flex: 1;
+}
+
+.stepTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.stepText {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Actions */
+.actions {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.primaryButton {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.primaryButton:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.secondaryActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+}
+
+.buttonIcon {
+    font-size: 18px;
+}
+
+/* Categories */
+.categoriesSection {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.categoriesTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.categoryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.categoryCard:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.categoryIcon {
+    font-size: 24px;
+}
+
+.categoryName {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Redirect Notice */
+.redirectNotice {
+    margin-top: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.redirectText {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+}
+
+.countdown {
+    font-weight: 600;
+    color: #10b981;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+        padding-top: 100px;
+    }
+
+    .contentWrapper {
+        padding: 24px;
+        border-radius: 12px;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .successIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .checkmark {
+        font-size: 28px;
+    }
+
+    .discountCard {
+        padding: 20px;
+    }
+
+    .discountTitle {
+        font-size: 18px;
+    }
+
+    .discountCode {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .userCard {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .userDetails {
+        text-align: center;
+    }
+
+    .benefitsList {
+        grid-template-columns: 1fr;
+    }
+
+    .secondaryActions {
+        grid-template-columns: 1fr;
+    }
+
+    .categoriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stepsList {
+        gap: 12px;
+    }
+
+    .step {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoriesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .codeContainer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .discountCode {
+        font-size: 14px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .contentWrapper {
+        background-color: #1f2937;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .title {
+        background: linear-gradient(to right, #34d399, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        color: #9ca3af;
+    }
+
+    .userCard {
+        background-color: #374151;
+        border-color: #4b5563;
+    }
+
+    .userName {
+        color: #e5e7eb;
+    }
+
+    .userEmail {
+        color: #9ca3af;
+    }
+
+    .benefitsTitle,
+    .nextStepsTitle,
+    .categoriesTitle {
+        color: #e5e7eb;
+    }
+
+    .benefit,
+    .step,
+    .categoryCard {
+        background-color: #374151;
+        border-color: #4b5563;
+    }
+
+    .benefit:hover,
+    .categoryCard:hover {
+        background-color: #4b5563;
+    }
+
+    .benefitTitle,
+    .stepTitle {
+        color: #e5e7eb;
+    }
+
+    .benefitText,
+    .stepText {
+        color: #9ca3af;
+    }
+
+    .categoryName {
+        color: #e5e7eb;
+    }
+
+    .secondaryButton {
+        color: #e5e7eb;
+        border-color: #4b5563;
+    }
+
+    .secondaryButton:hover {
+        background-color: #374151;
+        border-color: #6b7280;
+    }
+
+    .redirectText {
+        color: #9ca3af;
+    }
+
+    .countdown {
+        color: #34d399;
+    }
+}
