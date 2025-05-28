@@ -55,7 +55,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({children, href, FlyoutContent, c
     return (
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
              className={`${styles.container} ${className}`}>
-            <Link href={href} className={styles.link} onClick={handleClick}>
+            <Link href={href} target={"_blank"} className={styles.link} onClick={handleClick}>
                 {children}
                 <span
                     style={{
