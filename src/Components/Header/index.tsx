@@ -1,13 +1,13 @@
 "use client"
 
+import account from '../../../public/account.png'
 import {useState, useEffect} from "react"
 import styles from "./header.module.css"
 import Image from "next/image"
-import profile from "../../../public/account.png"
 import {FlyoutLink, PricingContent, ContactContent, CartContent} from "@/Components/flyout"
 import type {CartItem} from "@/types/CartItem"
 
-// Mock cart data - you should replace this with your actual cart state
+
 const mockCartItems: CartItem[] = [
     {
         products: {
@@ -38,15 +38,12 @@ const mockCartItems: CartItem[] = [
     },
 ]
 
-// Mock user data - replace with your actual user type
 interface User {
     id: number
     name: string
     email: string
-    avatar?: string
 }
 
-// Mock authentication hook - replace with your actual auth implementation
 const useAuth = () => {
     const [user, setUser] = useState<User | null>(null)
     const [isLoading, setIsLoading] = useState(true)
@@ -73,24 +70,13 @@ const useAuth = () => {
         checkAuth()
     }, [])
 
-    const login = async (UserData: User) => {
-        setUser(UserData)
-        localStorage.setItem("isLoggedIn", "true")
-        localStorage.setItem("userData", JSON.stringify({
-            id: 1,
-            name: "John Doe",
-            email: "john@example.com",
-            avatar: '../../../public/account.png'
-        }))
-    }
-
     const logout = () => {
         setUser(null)
         localStorage.removeItem("isLoggedIn")
         localStorage.removeItem("userData")
     }
 
-    return {user, isLoading, login, logout}
+    return {user, isLoading, logout}
 }
 
 export function Header() {
@@ -141,10 +127,10 @@ export function Header() {
 
                         {user && (
                             <div className={styles.profileContainer}>
-                                <a href="/profile" className={styles.profileLink}>
+                                <a href="/profile" className={styles.profileLink} target={"_blank"}>
                                     <Image
-                                        src={user.avatar || profile || "../../../public/account.png"}
-                                        alt={`${user.name}'s Profile`}
+                                        src={account}
+                                        alt="👤"
                                         width={32}
                                         height={32}
                                         className={styles.iconProfile}
